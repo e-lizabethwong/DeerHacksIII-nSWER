@@ -1,12 +1,17 @@
 import requests
 import json
 from flask import Flask
+import os
+from dotenv import load_dotenv, find_dotenv
+from os.path import join, dirname
+from flask import jsonify
 
+OPENAI = "s"
 url = "https://api.openai.com/v1/chat/completions"
 
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer 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",
+    "Authorization": f"Bearer {OPENAI}",
 }
 
 data = {
@@ -25,11 +30,25 @@ data = {
 
 
 app = Flask(__name__)
-@app.route('/submit', methods=['POST'])
-def prompt():
+@app.route('/', methods=['GET'])
+def get():
     response = requests.post(url, headers=headers, data=json.dumps(data))
     # print(response.text)
     return(json.loads(response.text)['choices'][0]['message']["content"])
+
+from flask import jsonify
+
+@app.route('/submit', methods=['POST'])
+def prompt():
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(data))
+        # Assuming the response is JSON and has the expected structure.
+        result = json.loads(response.text)['choices'][0]['message']["content"]
+        return jsonify({"result": result})
+    except Exception as e:
+        # Log the error or send back a custom error message
+        print(e)  # For debugging; remove or replace with logging in production
+        return jsonify({"error": "An error occurred processing your request."}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
