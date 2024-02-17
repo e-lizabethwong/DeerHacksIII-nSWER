@@ -12,13 +12,14 @@ import json
 with open('config.json', 'r') as file:
     config = json.load(file)
 
-print(config)
+print(config['KEY'])
+key = config['KEY']
 
 url = "https://api.openai.com/v1/chat/completions"
 
 headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer {'a'}",
+    "Authorization": f"Bearer {key}",
 }
 
 data = {
