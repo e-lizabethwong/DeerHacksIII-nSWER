@@ -6,12 +6,18 @@ from dotenv import load_dotenv, find_dotenv
 from os.path import join, dirname
 from flask import jsonify
 
-OPENAI = "s"
+from dotenv import load_dotenv, find_dotenv
+import os
+
+load_dotenv('.env')
+KEY: str = os.getenv('KEY')
+
+print(KEY)
 url = "https://api.openai.com/v1/chat/completions"
 
 headers = {
     "Content-Type": "application/json",
-    "Authorization": f"Bearer {OPENAI}",
+    "Authorization": f"Bearer {'a'}",
 }
 
 data = {
