@@ -6,13 +6,14 @@ from dotenv import load_dotenv, find_dotenv
 from os.path import join, dirname
 from flask import jsonify
 
-from dotenv import load_dotenv, find_dotenv
-import os
+import json
 
-load_dotenv('.env')
-KEY: str = os.getenv('KEY')
+# Replace 'config.json' with the path to your JSON file
+with open('config.json', 'r') as file:
+    config = json.load(file)
 
-print(KEY)
+print(config)
+
 url = "https://api.openai.com/v1/chat/completions"
 
 headers = {
