@@ -18,10 +18,10 @@ nSWER's digital assets were created using canva or sourced from public domain or
 One significant challenge we faced was ensuring effective communication between each component within our Chrome extension, particularly when utilizing Chrome's API for scraping web content. This was especially tricky for Single Page Applications (SPAs). Additionally, our team's unfamiliarity with the backend technology Flask presented hurdles. Midway through the hackathon, we decided to switch to Express, which required rapid adaptation and learning.
 
 ## Achievements:
-Despite these obstacles, I am incredibly proud of the final outcome. Our extension not only functions as intended, but I also take great pride in the originality and practicality of our idea. It's a solution that I find myself using daily. To address the challenge of scraping SPAs, we innovated by leveraging hashcodes. This approach allowed us to dynamically interact with SPA content, making our scraping process much more effective and versatile.
+Despite these obstacles, we are incredibly proud of the final outcome. Our extension not only functions as intended, but we also take great pride in the originality and practicality of our idea. It's a solution that we see ourselves using daily. To address the challenge of scraping SPAs, we innovated by leveraging hashcodes. This approach allowed us to dynamically interact with SPA content, making our scraping process much more effective and versatile.
 
 ## What we learned
-We learned a lot about connections between front end and back end as well as OpenAI's API.
+We became familiarized with setting up communication between frontend, backend, and OpenAi's API. We also learned to build a Chrome extension using only native technologies such as HTML, JavaScript, and CSS. We also learned the importance delegating tasks in an efficient and effective manner to meet project deadlines.
 
 ## What's next for nSWER
 We would love to implement further accessible resources into nSWER such as "make this page visually accessible for me" to change the way the website is formatted. We would also love to be able to implement OpenAI's SORA to explain concepts visually through the form of a tutorial video to accomodate visual learners. An optimization we would love to work on is improved parsing of the webpage to prioritize sections to pass through OpenAI's API.
