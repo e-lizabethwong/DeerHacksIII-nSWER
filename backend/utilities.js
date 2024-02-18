@@ -2,7 +2,9 @@ const axios = require('axios');
 require('dotenv').config()
 
 const endpoint = 'https://yt-gpt.openai.azure.com/openai/deployments/api-testing/chat/completions';
-const apiKey = process.env.APIKEY; // Replace with your actual API key
+const apiKey = 'acb7772f65d84a21a999996dfcfd31b4' //process.env.APIKEY; // Replace with your actual API key
+console.log("APIKEY:");
+console.log(apiKey);
 
 const headers = {
   'Content-Type': 'application/json',

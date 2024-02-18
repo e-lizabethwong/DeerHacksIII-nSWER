@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
 *{
-    font-family: "DH sans", sans-serif;
+    font-family: 'Poppins';
     font-optical-sizing:auto;
-    font-weight: 300, 400, 500;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -13,7 +15,7 @@
     background-color: #2b2929;
 
     display: flex;
-    gap: 1rem;
+    gap: 10px;
     flex-direction: column;
     align-content: center;
     text-align: center;
@@ -25,7 +27,6 @@
 .header {
     margin: 5px;
     font-size: 14px;
-    /* background-color: #e6dddd; */
 }
 
 .logo{
@@ -59,6 +60,7 @@
     flex-grow: 1;
 }
 
+/*
 .message {
     display: flex;
     gap: 10px;
@@ -84,10 +86,116 @@
     transform: scale(104%);
 }
 
+*/
+
+/*
+.search-input {
+    position: relative;
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px #4b4747;
+    z-index: 5;
+    /* box-shadow: 0px 1px 5px 3px black; *
+}
+
+.search-input input {
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    padding-right: 80px;
+    font-size: 18px;
+    /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0, 1); *
+}
+
+.content {
+    border:none
+}
+
+
+.search-input .autocom-box {
+    padding: 0px;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.autocom-box.active {
+    background-color: white;
+    margin-left:2px;
+
+    transform: translateY(-3px);
+    width: 310px;
+    opacity: 1;
+    pointer-events: auto;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.autocom-box li {
+    color: black;
+    text-align: left;
+    font-size: 15px;
+    list-style: none;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+li {
+    padding: 13px 8px;
+    cursor: pointer;
+}
+
+.autocom-box.active li {
+    display: block;
+
+}
+
+.autocom-box li:hover {
+    background: #d8d8d8;
+}
+
+.autocom-box.active .autocom-box li:hover {
+    display: block;
+}
+
+*/
+
+.wrapper {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+}
+
+.search-input input {
+    /* box-shadow: 0px 1px 5px rgba(0, 0, 0, 0, 1); */
+}
+
+.content {
+    height: 30px;
+    width: 295px;
+    font-size: 15px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: solid 2px #141313;
+    transition: .2s ease-out;
+}
+
+.content:hover {
+    transform: scale(103%);
+}
+
 .btn {
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     background-color: #8c52ff;
+    
+    margin-top: 5px;
+    width: 302px;
+    height: 32px;
 
     border: none;
     cursor: pointer;
@@ -97,6 +205,6 @@
 
 .btn:hover {
     background-color: #5542be;
-    transform: scale(105%);
+    transform: scale(103%);
     transition: .2s ease-out;
 }
