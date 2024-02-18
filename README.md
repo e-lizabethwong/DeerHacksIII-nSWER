@@ -2,7 +2,7 @@
 by team: yeaa (YutongElizabethAnneArsalan)
 
  nSWER makes it easy to get what you need from a website, whether it be research or the right solution on stackoverflow. Ask nSWER and get an answer, just like that. No more reading or skimming.
-
+ 
 ## Inspiration
 As students and developers, we often struggle with finding the information we need online. We created nSWER as an ‘answer’ to that problem in the form of a Chrome extension that will get us what we need from a website in the form of a user-friendly “chatbot” style Q-and-A UI.
 
@@ -14,11 +14,11 @@ We built nSWER's (very beautiful) front end with HTML and CSS. For its backend, 
 
 nSWER's digital assets were created using canva or sourced from public domain or copyright-free assets online.
 
-## Challenges we ran into
-The biggest challenge we ran into was setting up proper communication between our back end and OpenAI's API, especially in regards to key access.
+## Challenges Encountered:
+One significant challenge we faced was ensuring effective communication between each component within our Chrome extension, particularly when utilizing Chrome's API for scraping web content. This was especially tricky for Single Page Applications (SPAs). Additionally, our team's unfamiliarity with the backend technology Flask presented hurdles. Midway through the hackathon, we decided to switch to Express, which required rapid adaptation and learning.
 
-## Accomplishments that we're proud of
-We're most proud of our intuitively designed UI that focuses on the user's experience and learning as they sift through the heaps of information available on the internet.
+## Achievements:
+Despite these obstacles, I am incredibly proud of the final outcome. Our extension not only functions as intended, but I also take great pride in the originality and practicality of our idea. It's a solution that I find myself using daily. To address the challenge of scraping SPAs, we innovated by leveraging hashcodes. This approach allowed us to dynamically interact with SPA content, making our scraping process much more effective and versatile.
 
 ## What we learned
 We learned a lot about connections between front end and back end as well as OpenAI's API.
