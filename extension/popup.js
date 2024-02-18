@@ -2,6 +2,20 @@ const url = 'http://localhost:3000/'; // Replace with your server's URL
 const form = document.getElementById("message")
 const input = document.getElementById('content');
 const div = document.getElementById('mid')
+const a = document.getElementById('a');
+async function writeToClipboard(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Text successfully written to clipboard.');
+    } catch (err) {
+      console.error('Failed to write to clipboard: ', err);
+    }
+  }
+
+a.addEventListener('click', async()=>{
+    await writeToClipboard(div.innerHTML)
+})
+
 form.addEventListener('submit', async (e)=>{
     e.preventDefault();
     const content = input.value;
@@ -29,6 +43,7 @@ form.addEventListener('submit', async (e)=>{
                 const p = document.createElement("p");
                 p.innerText = data.respond[0].message.content;
                 div.appendChild(p);
+                a.style.display = "block";
             })
             .catch(error => {
                 console.error('Error:', error);

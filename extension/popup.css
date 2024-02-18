@@ -47,6 +47,13 @@
     line-height: 2;
 }
 
+.mid a{
+    font-size: smaller; 
+    color: rgb(167, 167, 167);
+    /* display: none; */
+  }
+  
+
 .results {
     /* background-color: #e6dddd; */
     flex-grow: 1;
