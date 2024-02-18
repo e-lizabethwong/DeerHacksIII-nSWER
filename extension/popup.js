@@ -1,6 +1,7 @@
 const url = 'http://localhost:3000/'; // Replace with your server's URL
-const form = document.getElementById('query-form');
-const input = document.getElementById('query-input');
+const form = document.getElementById("message")
+const input = document.getElementById('content');
+const div = document.getElementById('mid')
 form.addEventListener('submit', async (e)=>{
     e.preventDefault();
     const content = input.value;
@@ -15,7 +16,7 @@ form.addEventListener('submit', async (e)=>{
                 body: JSON.stringify({
                     content,
                     text
-                }) // Sending the content in the request body
+                })
             })
             .then(response => {
                 if (!response.ok) {
@@ -27,21 +28,11 @@ form.addEventListener('submit', async (e)=>{
                 console.log('Success:', data);
                 const p = document.createElement("p");
                 p.innerText = data.respond[0].message.content;
-                document.body.appendChild(p);
+                div.appendChild(p);
             })
             .catch(error => {
                 console.error('Error:', error);
             });
         });
     });
-    console.log(text)
-    
 })
-
-// chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-//     // Handle the received message from content.js
-//     const p = document.createElement('p');
-//     p.innerText=message;
-//     document.body.append(p.innerText);
-// });
-
