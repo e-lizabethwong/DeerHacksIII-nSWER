@@ -16,6 +16,10 @@ app.post('/', async(req, res)=>{
         res.status(500).send({message:"No ContentFound"});
         throw Error("No Content Received!")
     }
+
+    if(content == "make this page accessible") {
+
+    }
     const respond = await queryOpenAI(content+text);
     res.send({
         message:"Success",
