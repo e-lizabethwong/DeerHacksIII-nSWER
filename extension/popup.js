@@ -13,7 +13,7 @@ async function writeToClipboard(text) {
   }
 
 a.addEventListener('click', async()=>{
-    await writeToClipboard(div.innerHTML)
+    await writeToClipboard(div.innerText)
 })
 
 form.addEventListener('submit', async (e)=>{
