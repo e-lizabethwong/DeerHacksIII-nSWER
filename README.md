@@ -26,4 +26,4 @@ We learned a lot about connections between front end and back end as well as Ope
 ## What's next for nSWER
 We would love to implement further accessible resources into nSWER such as "make this page visually accessible for me" to change the way the website is formatted. We would also love to be able to implement OpenAI's SORA to explain concepts visually through the form of a tutorial video to accomodate visual learners. An optimization we would love to work on is improved parsing of the webpage to prioritize sections to pass through OpenAI's API.
 
-##NOTE: OpenAI API key is NOT included -- if you want to use this yourself, you will need to source your own key and add it in utilities.js
+## NOTE: OpenAI API key is NOT included -- if you want to use this yourself, you will need to source your own key and add it in utilities.js
